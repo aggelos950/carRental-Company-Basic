@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rent a vehicle</title>
+        <link rel="stylesheet" href="basic_style.css">
+        <style>
+            .section1{
+                text-align: center;
+
+            }
+            .section2{
+                text-align: center;
+                margin-top: 50px;
+                margin-bottom: 40px;
+
+            }
+            h2{
+                color: aliceblue;
+                margin-bottom: 40px;
+            }
+            label{
+                color: aliceblue;
+                font-size: 20px;
+            }
+            input{
+                border-radius: 20px;
+                width: 250px;
+                height: 30px;
+                border: none;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                text-align: center;
+                font-size: 15px;
+            }
+            textarea{
+                border-radius: 20px;
+                margin-top: 10px;
+            }
+            p{
+                color: aliceblue;
+                font-size: 17px;
+                margin-top: 0px;
+            }
+            a{
+                color: #fbceb1;
+            }
+            iframe{
+                border-radius: 10px;
+               
+            }
+            .formbutton{
+                width: 120px;
+                height: 35px;
+                margin-top: 0px;
+                background-color: #b2b2b2;
+                color: aliceblue;
+                font-size: 15px;}
+         
+
+
+
+        </style>
+    </head>
+        <body>
+            <div>
+              <h1>The Rent<span style="color:#404040"><strong>Fiction</strong></span></h1>
+            </div> 
+            <div class="sidebar">
+                <a href="interface1_new.html" >Main Page</a>
+                <a href="interface_2.html" >Our Profile</a>
+                <a href="interface_3.html" >Vehicles</a>
+                <a href="interface_4.html" >Find Cost</a>
+                <a href="interface_5.html" >Contact Us</a>
+                <a href="interface_6.html" >Managment Page</a>
+            </div>
+            <div class="main">
+                <div class="section1">
+                    <h2>Contact Form</h2>
+                    <div class="form_div">
+                        <form name="contactForm" action="messagedb.php" method="post">
+                            <label for="nameLabel">Name</label><br>
+                            <input type="text" id="nameText" name="nameText"><br>
+                            <label for="phoneLabel">Phone Number</label><br>
+                            <input type="text" id="phoneText" name="phoneText"><br>
+                            <label for="emailLabel">Email</label><br>
+                            <input type="text" id="emailText" name="emailText"><br>
+                            <label for="topicLabel">Topic</label><br>
+                            <input type="text" id="topicText" name="topicText"><br>
+                            <label for="messageLabel">Message</label><br>
+                            <textarea name="message" id="messageId" cols="35" rows="10"></textarea><br><br>
+                            <input type="submit" value="Send" name="Submit1" class="formbutton"><br>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="section2">
+                    <h2>Find Us</h2>
+                    <div>
+                       
+                            <p>Address: Ermou 120 Athina 105 54</p>
+                            <p>Phone: <a href="tel: 6912453782">6912453782</a></p>
+                            <p>Email: <a href="mailto: rentFiction@hotmail.com">rentFiction@hotmail.com</a></p>
+                         
+                    </div>
+                    <div>
+                        <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=%CE%95%CF%81%CE%BC%CE%BF%CF%8D%20120,%20%CE%91%CE%B8%CE%AE%CE%BD%CE%B1%20105%2054+(address)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/wearable-gps/">adventure gps</a></iframe>
+                    </div>
+
+                </div>
+
+
+
+            </div>    
+        </body>
+        <footer>
+            <div class="footerDiv">
+                <form name="NewsForm" action="clientdb.php" method="post">
+                    <label for="userLabel" class="footerLabel">Username</label>
+                    <input type="text" id="usernameText" class="footerText" name="usernameText"><br>
+                    <label for="nameeLabel" class="footerLabel">Name  </label>
+                    <input type="text" id="nameeText" class="footerText" name="nameeText"><br>
+                    <label for="emaillLabel" class="footerLabel">Email  </label>
+                    <input type="text" id="emaillText" class="footerText" name="emaillText" ><br>
+                    <input type="submit" value="Register" class="registerbutton">
+                </form>
+    
+            </div>
+            <div class="footerDiv">
+                <h4 class="footerh4">Contact Info</h4>
+                <div>
+                   
+                        <p class="footerp">Address: Ermou 120 Athina 105 54</p>
+                        <p class="footerp">Phone: <a href="tel: 6912453782" class="footera">6912453782</a></p>
+                        <p class="footerp">Email: <a href="mailto: rentFiction@hotmail.com" class="footera">rentFiction@hotmail.com</a></p>
+                     
+                </div>
+            </div>
+            <div class="footerDiv">
+                <iframe width="130" height="115" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=%CE%95%CF%81%CE%BC%CE%BF%CF%8D%20120,%20%CE%91%CE%B8%CE%AE%CE%BD%CE%B1%20105%2054+(address)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/wearable-gps/">adventure gps</a></iframe>
+            </div>
+        </footer>
+</html>

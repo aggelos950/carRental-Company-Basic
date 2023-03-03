@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rent a vehicle</title>
+        <link rel="stylesheet" href="basic_style.css">
+        <style>
+            .main{
+                text-align: center;
+            }
+            .form_div{
+                text-align: center;
+                margin-top: 200px;
+            }
+            input{
+                border-radius: 20px;
+                width: 300px;
+                height: 40px;
+                border: none;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                text-align: center;
+                font-size: 15px;
+
+            }
+            label{
+                color: aliceblue;
+                font-size: 20px;
+                
+                
+            }
+            .button{
+                width: 120px;
+                height: 35px;
+                margin-top: 0px;
+                background-color: #b2b2b2;
+                color: aliceblue;
+                font-size: 15px;
+            }
+            #outcome{
+                background-color: aliceblue;
+                font-size: 20px;
+                border-radius: 20px;
+            }
+            .moneyp{
+            font-size: 25px;
+            color: aliceblue;
+           }
+           
+        </style>
+
+        <script>
+            function showCost(){
+                var age = document.getElementById("ageText").value;
+                var cubics = document.getElementById("cubicText").value;
+                var days = document.getElementById("daysText").value;
+                var cost_cub=0
+                var cost_day=0
+                var cost_insur=0
+                var cost_rent=0
+                if (cubics>0 && cubics<=1600){
+                    if (days>0 && days<=5){
+                        cost_day=15.42
+                    }else if (days>5 && days<=10){
+                        cost_day=14.62
+                    }else{
+                        cost_day=13.15
+                    }
+
+                }else if (cubics>1600 && cubics<=2000){
+                    if (days>0 && days<=5){
+                        cost_day=16.82
+                    }else if (days>5 && days<=10){
+                        cost_day=15.76
+                    }else{
+                        cost_day=14.80
+                    }
+
+                }else{
+                    if (days>0 && days<=5){
+                        cost_day=18.22
+                    }else if (days>5 && days<=10){
+                        cost_day=17.10
+                    }else{
+                        cost_day=16.20
+                    }
+
+                }
+                if (age>17 && age<=22){
+                    cost_cub=0.00042
+                }else if(age>22 && age<=30){
+                    cost_cub=0.00036
+                }else if(age>30){
+                    cost_cub=0.00023
+                }
+                cost_insur=age*cost_cub*cubics
+                cost_rent=days*cost_day
+                var outcome = cost_rent+cost_insur
+                document.getElementById("outcome").innerHTML = outcome.toFixed(2)+" €";
+                
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+          <h1>The Rent<span style="color:#404040"><strong>Fiction</strong></span></h1>
+        </div> 
+        <div class="sidebar">
+            <a href="interface1_new.html" >Main Page</a>
+            <a href="interface_2.html" >Our Profile</a>
+            <a href="interface_3.html" >Vehicles</a>
+            <a href="interface_4.html" >Find Cost</a>
+            <a href="interface_5.html" >Contact Us</a>
+            <a href="interface_6.html" >Managment Page</a>
+        </div>
+        <div class="main">
+
+            <div class="form_div">
+                <form>
+                    <label for="ageLabel">Age of the driver</label><br>
+                    <input type="text" id="ageText"><br>
+                    <label for="cubicLabel">Cubic metres of vehicle</label><br>
+                    <input type="text" id="cubicText"><br>
+                    <label for="daysLabel">Days of rent</label><br>
+                    <input type="text" id="daysText"><br><br>
+                    <input type="button" name="costButton" value="Calculate Cost" onclick="showCost()" class="button"><br>
+                </form>
+                <p id="outcome"></p>
+            </div>   
+            <div class="moneyDiv">
+                <p class="moneyp">"Travel is the one thing you buy,</p>
+                <p class="moneyp">that makes you richer"</p>
+            </div>   
+
+        </div>
+    </body>
+    <footer>
+        <div class="footerDiv">
+            <form name="NewsForm" action="clientdb.php" method="post">
+                <label for="userLabel" class="footerLabel">Username</label>
+                <input type="text" id="usernameText" class="footerText" name="usernameText"><br>
+                <label for="nameeLabel" class="footerLabel">Name  </label>
+                <input type="text" id="nameeText" class="footerText" name="nameeText"><br>
+                <label for="emaillLabel" class="footerLabel">Email  </label>
+                <input type="text" id="emaillText" class="footerText" name="emaillText" ><br>
+                <input type="submit" value="Register" class="registerbutton">
+            </form>
+
+        </div>
+        <div class="footerDiv">
+            <h4 class="footerh4">Contact Info</h4>
+            <div>
+               
+                    <p class="footerp">Address: Ermou 120 Athina 105 54</p>
+                    <p class="footerp">Phone: <a href="tel: 6912453782" class="footera">6912453782</a></p>
+                    <p class="footerp">Email: <a href="mailto: rentFiction@hotmail.com" class="footera">rentFiction@hotmail.com</a></p>
+                 
+            </div>
+        </div>
+        <div class="footerDiv">
+            <iframe width="130" height="115" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=%CE%95%CF%81%CE%BC%CE%BF%CF%8D%20120,%20%CE%91%CE%B8%CE%AE%CE%BD%CE%B1%20105%2054+(address)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/wearable-gps/">adventure gps</a></iframe>
+        </div>
+    </footer>   
+</html> 

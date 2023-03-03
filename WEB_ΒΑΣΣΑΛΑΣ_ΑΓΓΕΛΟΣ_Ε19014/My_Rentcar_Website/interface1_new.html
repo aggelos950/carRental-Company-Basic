@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rent a vehicle</title>
+        <link rel="stylesheet" href="basic_style.css">
+        <style>
+          .col_who{
+              display: inline-block;
+              margin-bottom: 15px;
+              
+          }
+          .col_serv{
+              display: inline-block;
+              margin-right: 5px;
+          }
+          .img_rent{
+              width: 200px;
+              height: 200px;
+              border-radius: 30px;
+          }
+          .section1{
+              text-align: center;
+          }
+          .section2{
+              text-align: center;
+              margin-bottom: 40px;
+          }
+           .bt_inter2{
+            border-radius: 10px; 
+            width: 80px;
+            height: 40px;
+            border: none;
+            font-size: 17px;
+            font-family: "Times New Roman";
+            background-color: #b2b2b2;
+            margin-top: 20px;
+            color: aliceblue;
+            }
+
+            video{
+                border-radius: 15px;
+            }
+          
+          .p_serv{
+              color: aliceblue;
+          }
+          @media only screen and (max-width:1100px){
+            .col_serv{
+              width: 40%;
+            }
+          }
+
+                   
+        </style>
+    </head>
+    <body>
+        <div>
+          <h1>The Rent<span style="color:#404040"><strong>Fiction</strong></span></h1>
+        </div> 
+        <div class="sidebar">
+            <a href="interface1_new.html" >Main Page</a>
+            <a href="interface_2.html" >Our Profile</a>
+            <a href="interface_3.html" >Vehicles</a>
+            <a href="interface_4.html" >Find Cost</a>
+            <a href="interface_5.html" >Contact Us</a>
+            <a href="interface_6.html" >Managment Page</a>
+        </div>
+        <div class="main">
+            <div class="section1">
+                <div class="col_who" style="margin-right:20px" >
+                   <video width="430" height="250"  controls autoplay muted>
+                     <source src="video.mp4" type="video/mp4">
+                   </video>
+                </div>
+                <div class="col_who" style="background-image: url('letter2.jpg');background-attachment: fixed; 
+                    background-size: cover; border-radius: 10px; width: 470px; height: 255px;">
+                    <h3 style="margin-top:4px ; text-align: center;margin-bottom:0px; color: #404040;">Who are we?</h3>
+                    <p style="font-size: 17px;text-align: center; color: #404040;margin-top: 3px;">
+                      All started when some of my international friends wanted to visit me here in Athens. The plan was to stay here for 11 days and then move on to an island tour. For those days, we wanted to go all around Athens and explore its hidden depths. We soon reached to the conclusion, that cars needed to be rented and so, we got in contact with many companies. Little did we know, most of them were very expensive,and yet having a poor variaty of cars to choose from. So I got the inspiration and started one company of my own. We oped in 2020 and now having more than 100 people on staff, cars for every occassion and very competitive prices, we are the beating heart of rental services in Athens.
+                    </p>
+                </div>
+            </div>
+            <div class="section2" >
+                 <div class="serv_h3_div"><h3 style="color: aliceblue;">Our services</h3></div>
+                <div class="col_serv">
+                   <p class="p_serv">Rent Van</p>
+                  <img class ="img_rent" src="images-8.png" alt="Van">
+                 </div>
+                 <div class="col_serv">
+                   <p class="p_serv" >Rent Car</p>
+                   <img class ="img_rent" src="images-3.jpeg" alt="Italian Trulli">
+                 </div>
+                 <div class="col_serv">
+                   <p class="p_serv">Rent Motorbike</p>
+                   <img class ="img_rent" src="images-11.jpeg" alt="Italian Trulli">
+                 </div>
+                 <div class="col_serv">
+                  <p class="p_serv">Rent Special Drive</p>
+                  <img class ="img_rent" src="images-2.jpeg" alt="Italian Trulli">
+                </div>
+                <div><button class=bt_inter2 onclick="window.open('interface_2.html')">About us</button></div>
+            </div>
+
+        </div>
+
+    </body>
+    <footer>
+      <div class="footerDiv">
+        <form name="NewsForm" action="clientdb.php" method="post">
+          <label for="userLabel" class="footerLabel">Username</label>
+          <input type="text" id="usernameText" class="footerText" name="usernameText"><br>
+          <label for="nameeLabel" class="footerLabel">Name  </label>
+          <input type="text" id="nameeText" class="footerText" name="nameeText"><br>
+          <label for="emaillLabel" class="footerLabel">Email  </label>
+          <input type="text" id="emaillText" class="footerText" name="emaillText" ><br>
+          <input type="submit" value="Register" class="registerbutton">
+        </form>
+
+      </div>
+      <div class="footerDiv">
+          <h4 class="footerh4">Contact Info</h4>
+          <div>
+             
+                  <p class="footerp">Address: Ermou 120 Athina 105 54</p>
+                  <p class="footerp">Phone: <a href="tel: 6912453782" class="footera">6912453782</a></p>
+                  <p class="footerp">Email: <a href="mailto: rentFiction@hotmail.com" class="footera">rentFiction@hotmail.com</a></p>
+               
+          </div>
+      </div>
+      <div class="footerDiv">
+          <iframe width="130" height="115" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=%CE%95%CF%81%CE%BC%CE%BF%CF%8D%20120,%20%CE%91%CE%B8%CE%AE%CE%BD%CE%B1%20105%2054+(address)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/wearable-gps/">adventure gps</a></iframe>
+      </div>
+  </footer>
+    
+  </html>
